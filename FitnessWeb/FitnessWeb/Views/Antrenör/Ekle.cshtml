@@ -1,0 +1,160 @@
+﻿@model FitnessWeb.Models.Siniflar.Antrenör
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/AdminPanel.cshtml";
+}
+
+
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<br />
+<form method="post" enctype="multipart/form-data">
+
+    <div class="panel-body inf-content">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Antrenör Ekle</h3>
+                    </div>
+                </div>
+                <div class="card card-primary">
+                    <div class="table-responsive">
+                        <table class="table table-user-information">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-user  text-primary"></span>
+                                            İsim Soyisim
+                                        </strong>
+                                    </td>
+
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.Antrenörİsim, new { @class = "form-control" })
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Mail Adresi
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.AntMailAdresi, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Doğum Tarihi
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+
+                                        <input id="DogumTarih" name="DogumTarih" class="form-control" type="date" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Cinsiyet
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.DropDownListFor(x => x.tercihId, (List<SelectListItem>)ViewBag.cinsiyet)                           </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                            Telefon Numarası
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.TelefonNo, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                            Şifre
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.AntSifre, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                            Kategori
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.DropDownListFor(x => x.kategoriId, (List<SelectListItem>)ViewBag.kategori)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                            Danışan
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.DropDownListFor(x => x.DnId, (List<SelectListItem>)ViewBag.danisan)
+                                    </td>
+                                </tr>
+                              
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                            Profil Resmi
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+
+                                        <input type="file" name="Antgörsel" />
+                                    </td>
+
+
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn1" type="submit" class="btn btn-success">Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+
+
+<script>
+
+   
+
+</script>

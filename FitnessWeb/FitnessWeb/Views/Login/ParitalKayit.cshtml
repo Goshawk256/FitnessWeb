@@ -1,0 +1,49 @@
+﻿
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<div class="login-form login-form-left">
+    <div class="agile-row">
+        <h3>Kayıt Ol</h3>
+        <div class="login-agileits-top">
+            <form method="post" enctype="multipart/form-data">
+                <input type="text" class="name" name="DanisanIsım" Placeholder="İsim Soyisim" required="" />
+                <input type="email" class="email" name="DabisanMailAdresi" Placeholder="Mail Adresi" required="" />
+                <label for="Cinsiyet">Cinsiyet</label>
+                <input list="Cinsiyet" name="Cinsiyet" id="Cinsiyet" class="form-control">
+                <datalist id="Cinsiyet">
+                    <option value="Erkek">
+                    <option value="Kız">
+                </datalist>
+                <br />
+                <br />
+                <input type="text" class="name" name="istenen" Placeholder="İstenilen Kazanım" required="" />
+                <br />
+                <br />
+
+                <label for="birthday">Doğum Tarihi:</label>
+                <input type="date" id="DogumTarih" name="DogumTarih"><br><br>
+                <input type="text" class="name" name="TelefonNo" Placeholder="Telefon Numarası" required="" />
+
+                <input type="file" class="name" name="GörselUrl" Placeholder="Telefon Numarası" />
+                <br />
+                <br />
+                <input type="password" class="password" name="DanisanSifre" Placeholder="Şifre" required="" />
+                <div class="login-check">
+                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> I Accept to the <a href="#">Terms &amp; Conditions</a></label>
+                </div>
+                <input type="submit" value="Kayıt Ol" id="btn1">
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/weblogin/js/jquery-2.1.4.min.js"></script>
+<script>
+
+    $('#btn1').click(function () {
+
+        swal("Başarıyla Kayıt Oldunuz", "Giriş Yapabilirsiniz.");
+    })
+</script>

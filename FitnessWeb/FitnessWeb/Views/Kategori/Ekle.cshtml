@@ -1,0 +1,65 @@
+﻿@model FitnessWeb.Models.Siniflar.Kategori
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/AdminPanel.cshtml";
+}
+
+
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<br />
+<form method="post" >
+
+    <div class="panel-body inf-content">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Kategori Ekle</h3>
+                    </div>
+                </div>
+                <div class="card card-primary">
+                    <div class="table-responsive">
+                        <table class="table table-user-information">
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-user  text-primary"></span>
+                                            Kategori İsmi
+                                        </strong>
+                                    </td>
+
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
+                                    </td>
+
+                                </tr>
+                               
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <button id="btn4" type="submit" class="btn btn-success">Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+
+
+<script>
+
+
+
+</script>

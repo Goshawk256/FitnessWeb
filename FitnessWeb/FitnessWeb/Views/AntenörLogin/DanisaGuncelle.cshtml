@@ -1,0 +1,118 @@
+﻿@model FitnessWeb.Models.Siniflar.Danisanlar
+@{
+    ViewBag.Title = "DanisaGuncelle";
+    Layout = "~/Views/Shared/_Antloginlayout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "AntenörLogin", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+
+
+
+
+
+}))
+{
+    <div class="panel-body inf-content">
+        <div class="row">
+            <div class="col-md-4">
+                <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="@Url.Content(Model.GörselUrl)" data-original-title="Usuario">
+
+            </div>
+            <div class="col-md-6">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Danisan Öğün Güncelle</h3>
+                    </div>
+                </div>
+                <div class="card card-primary">
+
+                    <div class="table-responsive">
+                        <table class="table table-user-information">
+                            <tbody>
+                                @Html.HiddenFor(x => x.DanisanId)
+                                @Html.HiddenFor(x => x.GörselUrl)
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-user  text-primary"></span>
+                                            Sabah Öğün
+                                        </strong>
+                                    </td>
+
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.ogun1, new { @class = "form-control" })
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Sabah Öğün-2
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.ogun2, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Öğle Öğün
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.ogun3, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Ara Öğün
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.ogun4, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Akşam Öğün
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.ogun5, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Akşam Öğün-2
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.ogun6, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <button id="bt3" type="submit" class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

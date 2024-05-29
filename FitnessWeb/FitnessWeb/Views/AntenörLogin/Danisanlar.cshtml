@@ -1,0 +1,52 @@
+﻿
+@using FitnessWeb.Models.Siniflar;
+@model List<Danisanlar>
+@{
+    ViewBag.Title = "Danisanlar";
+    Layout = "~/Views/Shared/_Antloginlayout.cshtml";
+}
+
+
+
+
+
+<br />
+
+<table id="anttbl" class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+
+            <th>İsim Soyisim</th>
+            <th>Mail Adresi</th>
+            <th>Kategori</th>
+
+
+            <th>Telefon Numarası</th>
+
+            <th>Görsel</th>
+            <th>İşlemler</th>
+            <th>Güncelle</th>
+            <th>Değerleri</th>
+
+
+        </tr>
+    </thead>
+    @foreach (var a in Model)
+    {
+<tr>
+
+    <td>@a.DanisanIsım</td>
+    <td>@a.DabisanMailAdresi</td>
+    <td>@a.istenen</td>
+
+
+    <td>@a.TelefonNo</td>
+
+    <td><img alt="" style="width:80px; align-items:inherit ;" title="" class="img-circle img-thumbnail isTooltip" src="@a.GörselUrl" data-original-title="Usuario"></td>
+    <td> <a href="/AntenörLogin/YeniMesaj/" class="btn btn-outline-success">Mesaj Göner</a></td>
+    <td> <a href="/AntenörLogin/DanisaGuncelle/@a.DanisanId" class="btn btn-outline-success">Öğün Güncelle</a><br /> <br /> <a href="/AntenörLogin/DanisanegzersizGuncelle/@a.DanisanId" class="btn btn-outline-success">Egzersiz Güncelle</a></td>
+    <td> <a href="/AntenörLogin/DanisanDegerler/@a.DanisanId" class="btn btn-outline-success">Değerleri Gör</a></td>
+
+</tr>
+    }
+</table>

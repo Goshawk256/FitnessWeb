@@ -1,0 +1,127 @@
+﻿@model FitnessWeb.Models.Siniflar.Danisanlar
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/AdminPanel.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Danisan", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+
+
+
+
+
+}))
+{
+    <div class="panel-body inf-content">
+        <div class="row">
+            <div class="col-md-4">
+                <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="@Url.Content(Model.GörselUrl)" data-original-title="Usuario">
+
+            </div>
+            <div class="col-md-6">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h3 class="card-title">Danışan Güncelle</h3>
+                    </div>
+                </div>
+                <div class="card card-primary">
+
+                    <div class="table-responsive">
+                        <table class="table table-user-information">
+                            <tbody>
+                                @Html.HiddenFor(x => x.DanisanId)
+                                @Html.HiddenFor(x => x.GörselUrl)
+
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-user  text-primary"></span>
+                                            İsim Soyisim
+                                        </strong>
+                                    </td>
+
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.DanisanIsım, new { @class = "form-control" })
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Mail Adresi
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.DabisanMailAdresi, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                            Doğum Tarihi
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+
+                                        @Html.TextBoxFor(x => x.DogumTarih, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                            Telefon Numarası
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.TelefonNo, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                            Şifre
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.DanisanSifre, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                            İstenen
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        @Html.TextBoxFor(x => x.istenen, new { @class = "form-control" })
+                                    </td>
+                                </tr>
+
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <button id="bt3" type="submit" class="btn btn-warning">Güncelle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

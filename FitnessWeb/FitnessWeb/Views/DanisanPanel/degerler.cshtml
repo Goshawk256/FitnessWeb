@@ -1,0 +1,48 @@
+﻿
+@model FitnessWeb.Models.Siniflar.Danisanlar
+
+@{
+    ViewBag.Title = "degerler";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("degergüncelle", "DanisanPanel", FormMethod.Post))
+{
+    <table id=" " class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+
+                <th>Kilo</th>
+                <th>Boy</th>
+                <th>Vücut Yağ Oranı</th>
+                <th>Kas Kütlesi</th>
+                <th>Vücut Kitle İndeksi</th>
+                <th>İşlemler</th>
+
+
+            </tr>
+        </thead>
+
+        <tr>
+            @Html.HiddenFor(x => x.DanisanId)
+            <td> @Html.TextBoxFor(x => x.Kilo, new { @class = "form-control" })</td>
+            <td> @Html.TextBoxFor(x => x.boy, new { @class = "form-control" })</td>
+            <td> @Html.TextBoxFor(x => x.vctyag, new { @class = "form-control" })</td>
+            <td> @Html.TextBoxFor(x => x.kaskütlesi, new { @class = "form-control" })</td>
+            <td> @Html.TextBoxFor(x => x.kitleindex, new { @class = "form-control" })</td>
+
+
+
+
+
+            <td> <button type="submit" class="btn btn-outline-success">Güncelle</button></td>
+
+        </tr>
+
+
+    </table>
+
+
+
+}

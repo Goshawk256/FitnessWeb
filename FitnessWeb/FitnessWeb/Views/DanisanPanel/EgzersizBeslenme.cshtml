@@ -1,0 +1,82 @@
+﻿@using FitnessWeb.Models.Siniflar
+@model List<Danisanlar>
+@{
+    ViewBag.Title = "EgzersizBeslenme";
+    Layout = "~/Views/Shared/_PanelLayout.cshtml";
+}
+<th class="accent-dark">Öğünler</th>
+<table id="" class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+
+            <th>Sabah Öğün</th>
+            <th>Sabah Öğün-2</th>
+            <th>Öğle Öğün</th>
+
+
+
+
+            <th>Ara Öğün</th>
+            <th>Akşam Öğün</th>
+            <th>Akşam Öğün-2</th>
+
+
+        </tr>
+    </thead>
+    @foreach (var a in Model)
+    {
+        <tr>
+
+            <td>@a.ogun1</td>
+            <td>@a.ogun2</td>
+            <td>@a.ogun3</td>
+
+
+            <td>@a.ogun4</td>
+            <td>@a.ogun5</td>
+            <td>@a.ogun6</td>
+
+
+
+        </tr>
+    }
+
+    
+</table>
+<th>Egzersizler</th>
+<table id="" class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+
+            <th>Pazartesi</th>
+            <th>Salı</th>
+            <th>Çarşamba</th>
+
+
+
+
+            <th>Perşembe</th>
+           
+
+
+        </tr>
+    </thead>
+    @foreach (var a in Model)
+    {
+        <tr>
+
+            <td>@a.eg1</td>
+            <td>@a.eg2</td>
+            <td>@a.eg3</td>
+
+
+            <td>@a.eg4</td>
+          
+
+
+
+        </tr>
+    }
+</table>
+
+

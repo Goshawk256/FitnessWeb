@@ -1,0 +1,41 @@
+﻿
+
+
+@using FitnessWeb.Models.Siniflar;
+@model List<Kategori>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPanel.cshtml";
+}
+
+<br />
+
+<table id="kategoritbl" class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Kategori</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.KategoriId</td>
+                <td>@a.KategoriAd</td>
+
+                <td><a id="btn2" href="/Kategori/Sil/@a.KategoriId" class="btn btn-danger">Sil</a> <br /> <br /><a href="/Kategori/Guncelle/@a.KategoriId" class="btn btn-warning">Güncelle</a></td>
+
+            </tr>
+        }
+</table>
+
+
+<a href="/Kategori/Ekle/" class="btn btn-success"> Ekle</a>
+
+<script>
+
+
+</script>
+
+

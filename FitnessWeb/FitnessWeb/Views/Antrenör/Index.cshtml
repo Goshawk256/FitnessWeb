@@ -1,0 +1,60 @@
+﻿
+
+
+@using FitnessWeb.Models.Siniflar;
+@model List<Antrenör>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminPanel.cshtml";
+}
+
+<br />
+
+<table  class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>İsim Soyisim</th>
+            <th>Mail Adresi</th>
+            <th>Kategori</th>
+            <th>Doğum Tarihi</th>
+         
+
+            <th>Telefon Numarası</th>
+            <th>Şifre</th>
+            <th>Görsel</th>
+            <th>İşlemler</th>
+
+
+        </tr>
+    </thead>
+        @foreach (var a in Model)
+        {
+<tr>
+    <td>@a.AntrenörId</td>
+    <td>@a.Antrenörİsim</td>
+    <td>@a.AntMailAdresi</td>
+
+    <td>@a.kategori.KategoriAd</td>
+    <td>@a.DogumTarih</td>
+   
+
+
+    <td>@a.TelefonNo</td>
+    <td>@a.AntSifre</td>
+    <td><img alt="" style="width:80px; align-items:inherit ;" title="" class="img-circle img-thumbnail isTooltip" src="@a.Antgörsel" data-original-title="Usuario"></td>
+    <td><a id="btn2" href="/Antrenör/Sil/@a.AntrenörId" class="btn btn-danger">Sil</a> <br /> <br /><a href="/Antrenör/Guncelle/@a.AntrenörId" class="btn btn-warning">Güncelle</a></td>
+
+</tr>
+        }
+</table>
+
+
+<a href="/Antrenör/Ekle/" class="btn btn-success"> Ekle</a>
+
+  <script>
+      
+
+  </script>
+
+
